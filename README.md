@@ -1,6 +1,6 @@
 # practiseardino
 **Включение по значениям светочувствительного механизма**
-
+```c++
 void setup() {
   Serial.begin(9600);
   pinMode(7, OUTPUT);
@@ -31,10 +31,10 @@ void loop() {
 
 }
 
-
+```
 
 **Светофор**
-
+```c++
 //Coded by Jevins Annson of J4 Jevins
 //Subscribe To J4 Jevins Youtube :- https://www.youtube.com/J4Jevins
 
@@ -74,10 +74,11 @@ void loop() {
 
     }
 }
-
+```
 
 **Зажигание кнопкой без запоминания**
 
+```c++
 #define FirstLed 5
 #define SecondLed  6
 #define ThirdLed  7
@@ -111,3 +112,6 @@ if (btnVal == 0)
   }
 
 }
+```
+
+
