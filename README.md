@@ -1,5 +1,5 @@
 # practiseardino
-**Setup1**
+**Включение по значениям светочувствительного механизма**
 void setup() {
   Serial.begin(9600);
   pinMode(7, OUTPUT);
@@ -32,7 +32,7 @@ void loop() {
 
 
 
-**Setup2**
+**Светофор**
 //Coded by Jevins Annson of J4 Jevins
 //Subscribe To J4 Jevins Youtube :- https://www.youtube.com/J4Jevins
 
@@ -73,3 +73,38 @@ void loop() {
     }
 }
 
+
+**Зажигание кнопкой без запоминания**
+
+const int FirstLed = 5;
+const int SecondLed = 6;
+const int ThirdLed = 7;
+ int dot = 8;
+  
+void setup() {
+  
+  pinMode (FirstLed, OUTPUT);
+  pinMode (SecondLed, OUTPUT);
+  pinMode (ThirdLed, OUTPUT);
+  pinMode (dot, INPUT);
+}
+
+void loop() {
+
+
+if (digitalRead(dot) == HIGH)
+{
+
+    digitalWrite(FirstLed, HIGH);
+    digitalWrite(SecondLed, HIGH);
+    digitalWrite(ThirdLed, HIGH);
+ 
+  }
+  else {
+
+    digitalWrite(FirstLed, LOW);
+    digitalWrite(SecondLed, LOW);
+    digitalWrite(ThirdLed, LOW);
+  }
+
+}
