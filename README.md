@@ -229,7 +229,7 @@ led.crossFade(RGBLed::RED, RGBLed::GREEN, 5, 1000);  // Fade from RED to GREEN i
 
 **Вывод значения температуры на дисплей**
 
-(Дисплей амперки)[http://wiki.amperka.ru/%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D1%8B:troyka:quad-display-v2]
+[Дисплей амперки](http://wiki.amperka.ru/%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D1%8B:troyka:quad-display-v2)
 
 ```c++
 // Подключаем библиотеку для работы с дисплеем
