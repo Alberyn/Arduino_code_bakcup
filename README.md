@@ -51,7 +51,7 @@ void setup() {
 void loop() {
 
   
-    for (counter = 0; counter < 5; ++counter) {
+    for (counter = 0; counter < 2; ++counter) {
 
         digitalWrite (FirstLed, HIGH);
         delay (1000);
@@ -63,10 +63,13 @@ void loop() {
         delay (500);
         digitalWrite (SecondLed, LOW);
         delay(1000);
+        digitalWrite (SecondLed, HIGH);
+        delay (500);
         digitalWrite (ThirdLed, LOW);
+        delay (1000);
+        digitalWrite (SecondLed, LOW);
+        
 
     }
 }
-
-
 
