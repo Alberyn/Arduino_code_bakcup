@@ -163,7 +163,7 @@ if (btnState)
 
 **RGB подстветка**
 
-https://github.com/wilmouths/RGBLed
+[Библиотека для подсветки](https://github.com/wilmouths/RGBLed)
 
 ```c++
 #include <RGBLed.h>
@@ -188,4 +188,41 @@ led.brightness(20); // 50% brightness
 
 led.crossFade(RGBLed::RED, RGBLed::GREEN, 5, 1000);  // Fade from RED to GREEN in 5 steps during 100ms 
 }
+```
+
+**Термометр**
+
+[Сайт для примеров с Амперкой](http://wiki.amperka.ru/%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D1%8B:troyka-temperature-sensor)
+```c++
+    // библиотека для работы с аналоговым термометром (Troyka-модуль)
+    #include <TroykaThermometer.h>
+     
+    // создаём объект для работы с аналоговым термометром
+    // и передаём ему номер пина выходного сигнала
+    TroykaThermometer thermometer(A0);
+     
+    void setup()
+    {
+      // открываем последовательный порт
+      Serial.begin(9600);
+    }
+     
+    void loop()
+    {
+      // считываем данные с аналогового термометра
+      thermometer.read();
+      // вывод показателей аналогового термометра в градусах Цельсия
+      Serial.print("Temperature is ");
+      Serial.print(thermometer.getTemperatureC());
+      Serial.println(" C");
+      // вывод показателей аналогового термометра в градусах Кельвина
+      Serial.print("Temperature is ");
+      Serial.print(thermometer.getTemperatureK());
+      Serial.println(" K");
+      // вывод показателей аналогового термометра в градусах Фаренгейта
+      Serial.print("Temperature is ");
+      Serial.print(thermometer.getTemperatureF());
+      Serial.println(" F");
+      delay(1000);
+    }
 ```
