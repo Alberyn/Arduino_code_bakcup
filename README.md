@@ -76,10 +76,11 @@ void loop() {
 
 **Зажигание кнопкой без запоминания**
 
-const int FirstLed = 5;
-const int SecondLed = 6;
-const int ThirdLed = 7;
- int dot = 8;
+#define FirstLed 5
+#define SecondLed  6
+#define ThirdLed  7
+#define dot  8
+  
   
 void setup() {
   
