@@ -226,3 +226,37 @@ led.crossFade(RGBLed::RED, RGBLed::GREEN, 5, 1000);  // Fade from RED to GREEN i
       delay(1000);
     }
 ```
+
+**Вывод значения температуры на дисплей**
+
+(Дисплей амперки)[http://wiki.amperka.ru/%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D1%8B:troyka:quad-display-v2]
+
+```c++
+// Подключаем библиотеку для работы с дисплеем
+#include <QuadDisplay2.h>
+#include <TroykaThermometer.h>
+// создаём объект класса QuadDisplay и передаём номер пина CS
+QuadDisplay qd(9);
+TroykaThermometer thermometer(A0);
+ 
+void setup()
+{
+  qd.begin();
+  Serial.begin(9600);
+}
+
+void loop() {
+  thermometer.read();
+// можно показывать температуру в °C
+  qd.displayTemperatureC(thermometer.getTemperatureC());
+  delay(1000);
+ 
+  qd.displayClear();
+  qd.displayTemperatureC(thermometer.getTemperatureF());
+  delay(1000);
+  qd.displayClear();
+  qd.displayTemperatureC(thermometer.getTemperatureK());
+  delay(1000);
+}
+
+```
