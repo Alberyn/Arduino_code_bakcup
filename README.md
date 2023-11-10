@@ -1,5 +1,5 @@
 # practiseardino
-
+**Setup1**
 void setup() {
   Serial.begin(9600);
   pinMode(7, OUTPUT);
@@ -29,5 +29,44 @@ void loop() {
   Serial.println("Photo: " + String(photo) + ", Ptr: " + String(ptr) );
 
 }
+
+
+
+**Setup2**
+//Coded by Jevins Annson of J4 Jevins
+//Subscribe To J4 Jevins Youtube :- https://www.youtube.com/J4Jevins
+
+const int FirstLed = 5;
+const int SecondLed = 6;
+const int ThirdLed = 7;
+int counter;
+  
+void setup() {
+  
+  pinMode (FirstLed, OUTPUT);
+  pinMode (SecondLed, OUTPUT);
+  pinMode (ThirdLed, OUTPUT);
+}
+
+void loop() {
+
+  
+    for (counter = 0; counter < 5; ++counter) {
+
+        digitalWrite (FirstLed, HIGH);
+        delay (1000);
+        digitalWrite (SecondLed, HIGH);
+        delay (500);
+        digitalWrite (FirstLed, LOW);
+        delay (1000);
+        digitalWrite (ThirdLed, HIGH);
+        delay (500);
+        digitalWrite (SecondLed, LOW);
+        delay(1000);
+        digitalWrite (ThirdLed, LOW);
+
+    }
+}
+
 
 
