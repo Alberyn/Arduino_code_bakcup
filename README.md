@@ -93,9 +93,9 @@ void setup() {
 }
 
 void loop() {
+int btnVal = digitalRead(dot);
 
-
-if (digitalRead(dot) == HIGH)
+if (btnVal == 0)
 {
 
     digitalWrite(FirstLed, HIGH);
