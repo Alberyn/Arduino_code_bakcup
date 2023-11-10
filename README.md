@@ -114,4 +114,49 @@ if (btnVal == 0)
 }
 ```
 
+**Зажигание светодиодов с сохранение результата нажатия**
+
+
+```c++
+#define FirstLed 5
+#define SecondLed  6
+#define ThirdLed  7
+#define dot  8
+
+bool btnState = false;
+ //сохраняется результат нажатия кнопки - диоды вкл без постоянного нажатия кнопки и наоборот 
+void setup() {
+  
+  pinMode (FirstLed, OUTPUT);
+  pinMode (SecondLed, OUTPUT);
+  pinMode (ThirdLed, OUTPUT);
+  pinMode (dot, INPUT);
+}
+
+void loop() {
+
+int btnVal = digitalRead(dot);
+
+if (btnVal == 0){
+
+  btnState = !btnState;
+}
+
+if (btnState)
+{
+
+    digitalWrite(FirstLed, HIGH);
+    digitalWrite(SecondLed, HIGH);
+    digitalWrite(ThirdLed, HIGH);
+ 
+  }
+  else {
+
+    digitalWrite(FirstLed, LOW);
+    digitalWrite(SecondLed, LOW);
+    digitalWrite(ThirdLed, LOW);
+  }
+
+}
+```
 
