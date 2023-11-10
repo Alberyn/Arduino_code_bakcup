@@ -162,6 +162,9 @@ if (btnState)
 
 
 **RGB подстветка**
+
+https://github.com/wilmouths/RGBLed
+
 ```c++
 #include <RGBLed.h>
 
