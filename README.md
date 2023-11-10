@@ -160,3 +160,29 @@ if (btnState)
 }
 ```
 
+
+**RGB подстветка**
+```c++
+#include <RGBLed.h>
+
+#define RED_PIN 9
+#define GREEN_PIN 11
+#define BLUE_PIN 10
+
+RGBLed led(RED_PIN, GREEN_PIN, BLUE_PIN, RGBLed::COMMON_ANODE);
+
+void setup() {
+pinMode(RED_PIN, OUTPUT);
+  pinMode(GREEN_PIN, OUTPUT);
+  pinMode(BLUE_PIN, OUTPUT);
+}
+
+void loop() {
+//led.setColor(RGBLed::YELLOW);
+//led.setColor(200, 120, 0);
+led.brightness(20); // 50% brightness
+//led.fadeOut(210, 150, 0, 3, 1000);
+
+led.crossFade(RGBLed::RED, RGBLed::GREEN, 5, 1000);  // Fade from RED to GREEN in 5 steps during 100ms 
+}
+```
