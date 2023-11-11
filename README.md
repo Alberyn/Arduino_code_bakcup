@@ -315,6 +315,8 @@ void loop() {
 
 **Изменение угла сервопривода с помощью потенциометра**
 
+[Servo](https://docs.arduino.cc/learn/electronics/servo-motors)
+
 ```c++
 #include <Servo.h>
 #define potpin A0
