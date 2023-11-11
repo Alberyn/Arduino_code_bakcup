@@ -475,3 +475,47 @@ void loop(){
 }
 ```
 
+**Управление мотором через джойстик**
+
+```c++
+#define SPEED_1      5 
+#define DIR_1        4
+ 
+#define SPEED_2      6
+#define DIR_2        7
+
+#define ux A0
+
+
+void setup(){
+  Serial.begin(9600);
+  pinMode (ux, INPUT);
+  
+  for (int i = 4; i < 8; i++) {     
+    pinMode(i, OUTPUT);
+  }
+}
+
+void loop(){
+  Serial.println(analogRead(ux));
+  delay(200);
+  int command = analogRead(ux);
+
+  if (command < 200) {
+       
+    digitalWrite(DIR_1, LOW); // set direction
+   analogWrite(SPEED_1, 255); // set speed
+  }
+  else if (command > 200 && command < 600){
+  digitalWrite(DIR_1, HIGH); // set direction
+   analogWrite(SPEED_1, 255);
+
+  }
+    else if (command > 600){
+  digitalWrite(DIR_1, HIGH); // set direction
+   analogWrite(SPEED_1, 0);
+
+  }      
+
+}
+```
