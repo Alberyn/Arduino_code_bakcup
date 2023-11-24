@@ -555,61 +555,33 @@ void loop(){
         
         
         
-          digitalWrite(DIR_1, HIGH); // set direction
-          analogWrite(SPEED_1, 255); // set speed
+          digitalWrite(DIR_1, LOW); // set direction
+          analogWrite(SPEED_1, 200); // set speed
 
           digitalWrite(DIR_2, HIGH); // set direction
-          analogWrite(SPEED_2, 255); // set speed
+          analogWrite(SPEED_2, 255); // set speed поехали прямо
 
-          delay(2000);
+          delay(500);
+
+          digitalWrite(DIR_1, HIGH); // set direction
+          analogWrite(SPEED_1, 200); // set speed
+
+          
+          delay(500);
 
           digitalWrite(DIR_1, LOW); // set direction
-          analogWrite(SPEED_1, 255); // set speed
+          analogWrite(SPEED_1, 200); // set speed
 
-          digitalWrite(DIR_2, HIGH); // set direction
-          analogWrite(SPEED_2, 255); // set speed
+         
 
-          delay(5000);
-
-          digitalWrite(DIR_1, HIGH); // set direction
-          analogWrite(SPEED_1, 255); // set speed
-
-          digitalWrite(DIR_2, HIGH); // set direction
-          analogWrite(SPEED_2, 255); // set speed
-
-          delay(2000);
-
-          digitalWrite(DIR_1, LOW); // set direction
-          analogWrite(SPEED_1, 255); // set speed
-
-          digitalWrite(DIR_2, HIGH); // set direction
-          analogWrite(SPEED_2, 255); // set speed
-
-          delay(5000);
+          delay(500);
 
           digitalWrite(DIR_1, HIGH); // set direction
-          analogWrite(SPEED_1, 255); // set speed
+          analogWrite(SPEED_1, 200); // set speed
 
-          digitalWrite(DIR_2, HIGH); // set direction
-          analogWrite(SPEED_2, 255); // set speed
+       
+          delay(500);
 
-          delay(2000);
-
-          digitalWrite(DIR_1, LOW); // set direction
-          analogWrite(SPEED_1, 255); // set speed
-
-          digitalWrite(DIR_2, HIGH); // set direction
-          analogWrite(SPEED_2, 255); // set speed
-
-          delay(5000);
-
-          digitalWrite(DIR_1, HIGH); // set direction
-          analogWrite(SPEED_1, 255); // set speed
-
-          digitalWrite(DIR_2, HIGH); // set direction
-          analogWrite(SPEED_2, 255); // set speed
-
-          delay(2000);
 
           analogWrite(SPEED_1, 0); 
           analogWrite(SPEED_2, 0);  
